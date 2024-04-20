@@ -2,5 +2,5 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
   },
-  "postCreateCommand": "until docker info; do sleep 1; done; minikube start"
+  "postCreateCommand": "/workspace/.devcontainer/start-arc.sh"
 }
