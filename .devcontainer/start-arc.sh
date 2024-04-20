@@ -16,7 +16,7 @@ helm install arc \
 helm install "${RUNNER_INSTALLATION_NAME}" \
     --namespace "${RUNNER_NAMESPACE}" \
     --create-namespace \
-    --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
+    --set githubConfigUrl="${ARC_CONFIG_URL}" \
     --set githubConfigSecret.github_token="${FAST_ARC_TOKEN}" \
     --set maxRunners="2" \
     oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
