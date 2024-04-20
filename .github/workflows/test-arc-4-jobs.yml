@@ -1,0 +1,16 @@
+name: Test ARC Sleep Matrix (4 jobs)
+on:
+    workflow_dispatch:
+
+jobs:
+  so_many_jobs:
+    runs-on: arc-runner-set
+    strategy:
+      matrix:
+        thing1: [10, 12]
+        thing2: [value1, value2]
+    steps:
+      - name: Echo matrix
+        run: echo "$ $"
+      - name: Snooze a little
+        run: sleep 10
